@@ -7,4 +7,4 @@ const OrderSchema = new mongoose.Schema({
   deliveryTimestamp: { type: Date } // optional historical timestamp
 }, { timestamps: true });
 
-module.exports = mongoose.model('Order', OrderSchema);
+module.exports = mongoose.models.Order || mongoose.model("Order", OrderSchema);
